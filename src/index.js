@@ -1,4 +1,6 @@
-require('dotenv').config()
+require('dotenv').config({
+	path:".src/.env"
+})
 const express = require('express')
 const cors = require('cors')
 
@@ -12,8 +14,8 @@ app.get('/', async (req, res) => {
 		const carros = await knex('carros')
 		return res.json(carros)
 }catch(error){
-	console.log(error)
-	return res.status(500).json({mensagem:'Erro no servidor'})}
+        console.log(error.message)
+	return res.status(500).json(error.message)}
 }
 )
 
