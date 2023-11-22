@@ -13,8 +13,9 @@ app.get('/', async (req, res) => {
 		return res.json(carros)
 }catch(error){
 	console.log(error)
-	return res.status(500).json({mensagem:'Erro no servidor'})
+	return res.status(500).json({mensagem:'Erro no servidor'})}
 }
+)
 
 const port = process.env.PORT || 3000
 
