@@ -2,6 +2,7 @@ require('dotenv').config({
 	path:".src/.env"
 })
 const express = require('express')
+const knex = require('knex');
 const cors = require('cors')
 
 const app = express()
